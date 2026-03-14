@@ -2,7 +2,7 @@
     <div class="backdrop"></div>
     <header class="flex justify-between fixed top-0 left-0 right-0 h-16 bg-[var(--card-bg)] border-b border-[var(--border-color)] shadow-sm z-30">
         <router-link class="flex-shrink-0" :to="{ name: 'frontend.home' }">
-            <img class="w-full" :src="setting.theme_logo" alt="logo">
+            <img class="max-w-full max-h-20" :src="setting.theme_logo" alt="logo">
         </router-link>
         <div class="flex items-center justify-end w-full gap-4">
             <div class="sub-header flex items-center gap-4 transition xh:justify-between xh:fixed xh:left-0 xh:w-full xh:p-4 xh:border-y xh:border-[#EFF0F6] xh:bg-white">
@@ -70,7 +70,7 @@
 
             <!-- BOTON PARA OCULTAR SIDEBAR -->
             <!-- <button class="fa-solid fa-align-left db-header-nav w-9 h-9 rounded-lg text-primary bg-primary/5"></button> -->
-            
+
             <div class="dropdown-group">
                 <button class="dropdown-btn flex items-center gap-2 px-3 py-2 hover:bg-[var(--bg)] rounded-lg transition-colors">
                     <img class="flex-shrink-0 w-9 h-9 object-cover rounded-lg" :src="authInfo.image" alt="avatar">

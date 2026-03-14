@@ -5,16 +5,14 @@
 
 @layer base {
     :root {
-        --primary: 103 198 227;
-        /* --primary: 255, 10, 10; */
+        --primary: #4342ff;
         --primary-slate: 255 59 142;
-        --primary-light: 255 237 244;
+        --primary-light: 237 237 255;
         --client-font: 'Rubik', sans-serif;
         --admin-font: 'Public Sans', sans-serif;
-        --bg: #f5f5f5;
+        --bg: #F6F7FB;
         --background: 210 20% 98%;
         --foreground: 222 47% 11%;
-        --primary: 240 100% 50%;
         --radius: 0.5rem;
         --background: 0 0% 100%;
         --foreground: 222.2 47.4% 11.2%;
@@ -26,20 +24,20 @@
         --input: 214.3 31.8% 91.4%;
         --card: 0 0% 100%;
         --card-foreground: 222.2 47.4% 11.2%;
-        --primary: 222.2 47.4% 11.2%;
-        --primary-foreground: 210 40% 98%;
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222.2 47.4% 11.2%;
+        --primary: 241 100% 63%;
+        --primary-foreground: #FFFFFF;
+        --secondary: #0f0e48;
+        --secondary-foreground: #FFFFFF;
         --accent: 210 40% 96.1%;
         --accent-foreground: 222.2 47.4% 11.2%;
-        --destructive: 0 100% 50%;
-        --destructive-foreground: 210 40% 98%;
-        --ring: 215 20.2% 65.1%;
+        --destructive: 241 100% 63%;
+        --destructive-foreground: 237 237 255;
+        --ring: 241 80% 75%;
         --radius: 0.5rem;
         /* TITO APP Brand Colors - Updated */
-        --brand: #E30613;
-        --brand-600: #C10510;
-        --brand-700: #9E040D;
+        --brand: #4342ff;
+        --brand-600: #0f0e48;
+        --brand-700: #1f1c9c;
         --bg: #F6F7FB;
         --card-bg: #FFFFFF;
         --muted-text: #6B7280;
@@ -47,14 +45,14 @@
         --border-color: #EAEAF0;
         --success: #16A34A;
         --warning: #F59E0B;
-        --danger: #EF4444;
+        --danger: #4342ff;
         --info: #3B82F6;
         /* Chart colors */
-        --chart-1: #E30613;
+        --chart-1: #4342ff;
         --chart-2: #3B82F6;
         --chart-3: #F59E0B;
         --chart-4: #8B5CF6;
-        --chart-5: #EC4899;
+        --chart-5: #0f0e48;
         /* Legacy support */
         --fg-900: #1A1A1A;
         --fg-600: #666666;
@@ -73,13 +71,13 @@
         --input: 216 34% 17%;
         --card: 224 71% 4%;
         --card-foreground: 213 31% 91%;
-        --primary: 210 40% 98%;
+        --primary: 241 100% 63%;
         --primary-foreground: 222.2 47.4% 1.2%;
-        --secondary: 222.2 47.4% 11.2%;
+        --secondary: 241 75% 17%;
         --secondary-foreground: 210 40% 98%;
-        --destructive: 0 63% 31%;
+        --destructive: 241 63% 31%;
         --destructive-foreground: 210 40% 98%;
-        --ring: 216 34% 17%;
+        --ring: 241 34% 17%;
         --radius: 0.5rem;
     }
 
@@ -110,7 +108,7 @@
 
     .border-color {border-color: var(--border-color);}
     .border-brand {border-color: var(--brand);}
-    .kpi-stripe {background: linear-gradient(90deg, var(--brand) 0%, #ff6a6a 50%, var(--brand-600) 100%);}
+    .kpi-stripe {background: linear-gradient(90deg, var(--brand) 0%, #6c6bff 50%, var(--brand-600) 100%);}
 
     .container { @apply max-w-6xl mx-auto px-2.5 sm:px-4 }
     .row { @apply flex flex-wrap -m-3 }
@@ -193,7 +191,7 @@
     #cart.active { @apply opacity-100 visible }
     #cart.active > div { @apply ltr:translate-x-0 rtl:-translate-x-0 }
     .fd-backdrop.active { @apply opacity-100 visible }
-    .cart-switch:checked + label { @apply text-white bg-[#008BBA] }
+    .cart-switch:checked + label { @apply text-white bg-[#4342ff] }
     .size-tabs .active { @apply bg-primary-light border-primary }
     .size-tabs .active .custom-radio-field:checked + .custom-radio-span { @apply border-primary }
     .extra .custom-checkbox-field { @apply z-0 }
@@ -313,7 +311,7 @@
     .db-order-status.active { @apply before:border-[5px] }
 
     /* COMMON CLASS */
-    .invalid { @apply !border-red-300 before:!bg-red-300 }
+    .invalid { @apply !border-[#4342ff]/40 before:!bg-[#4342ff]/40 }
 
     /* MAIN CONTENT */
     .db-main { @apply font-public px-3 sm:px-4 pb-4 xh:pt-[170px] pt-[80px] lg:pt-[84px] ltr:lg:pl-[280px] rtl:lg:pr-[280px] ltr:lg:pr-5 rtl:lg:pl-5 lg:pb-5 h-screen overflow-auto transition bg-[#f7f7fc] }
@@ -326,13 +324,13 @@
     /* BUTTON */
     .db-btn { @apply inline-flex items-center justify-center gap-2 rounded-md shadow-db-card capitalize text-sm font-normal py-2.5 px-4 transition }
     .db-btn-full { @apply flex items-center justify-center gap-2 w-full rounded-lg shadow-db-card capitalize text-sm font-medium py-2.5 px-4 transition }
-    .xmark-btn { @apply w-6 h-6 leading-6 text-base text-center rounded-full transition bg-gray-100 text-gray-500 hover:text-primary hover:bg-red-100 }
+    .xmark-btn { @apply w-6 h-6 leading-6 text-base text-center rounded-full transition bg-gray-100 text-gray-500 hover:text-primary hover:bg-primary/10 }
     .db-btn-outline { @apply inline-flex items-center justify-center gap-1.5 rounded-md capitalize text-sm font-normal py-1.5 px-3 border transition border-gray-200 text-gray-700 bg-white hover:border-primary/20 hover:bg-primary/5 hover:text-primary }
     .db-btn-outline i { @apply text-xs }
     .db-btn-outline.primary { @apply border-primary text-primary hover:bg-primary/10 }
     .db-btn-outline.warning { @apply border-[#F6A609] text-[#F6A609] hover:bg-[#F6A609]/10 }
     .db-btn-outline.success { @apply border-green-500 text-green-600 hover:bg-green-50 }
-    .db-btn-outline.danger { @apply border-red-500 text-red-600 hover:bg-red-50 }
+    .db-btn-outline.danger { @apply border-[#4342ff] text-[#4342ff] hover:bg-[#4342ff]/10 }
     .db-btn-outline.info { @apply border-cyan-500 text-cyan-600 hover:bg-cyan-50 }
     .db-btn-outline.sm { @apply !text-xs !rounded !py-1 !px-2 !gap-1 }
     .db-btn-outline.sm i { @apply !text-[10px] }
@@ -345,7 +343,7 @@
     .db-btn-fill.green { @apply text-emerald-600 bg-emerald-100 hover:bg-emerald-200 }
     .db-btn-fill.blue { @apply text-blue-600 bg-blue-100 hover:bg-blue-200 }
     .db-btn-fill.gray { @apply text-gray-600 bg-gray-200 hover:bg-gray-300 }
-    .db-btn-fill.red { @apply text-red-600 bg-red-100 hover:bg-red-200 }
+    .db-btn-fill.red { @apply text-[#4342ff] bg-[#4342ff]/10 hover:bg-[#4342ff]/20 }
     .db-btn-fill.sm { @apply !text-xs !rounded !py-1 !px-2 !gap-1 }
     .db-btn-fill.sm i { @apply !text-[10px] }
 
@@ -387,7 +385,7 @@
     .db-tabDiv.active { @apply block }
     .db-tabBtn span { @apply whitespace-nowrap text-ellipsis overflow-hidden }
 
-    .profile-tabBtn.active { @apply shadow-[0px_6px_10px_rgba(255,_0,_107,_0.24)] stroke-white text-white bg-primary }
+    .profile-tabBtn.active { @apply shadow-[0px_6px_10px_rgba(67,_66,_255,_0.24)] stroke-white text-white bg-primary }
     .profile-tabDiv { @apply hidden }
     .profile-tabDiv.active { @apply block }
 
@@ -399,12 +397,12 @@
 
     /* FIELDS */
     .db-field-title { @apply uppercase text-xs font-medium font-public block mb-2 text-[#566a7f] }
-    .db-field-title.required { @apply after:content-['*'] ltr:after:ml-1 rtl:after:mr-1 after:text-red-500 }
+    .db-field-title.required { @apply after:content-['*'] ltr:after:ml-1 rtl:after:mr-1 after:text-[#4342ff] }
     .db-field-control { @apply block w-full h-10 px-3 pb-[2px] font-public rounded-md border transition bg-white border-gray-200 focus-within:border-primary/20 }
     .db-multiple-field { @apply flex items-center w-full h-10 rounded-md border transition bg-white border-gray-200 focus-within:border-primary/20 }
     .db-multiple-field input { @apply w-1/2 h-full px-3 pb-[2px] ltr:border-l rtl:border-r first:border-none border-gray-200 transition }
     .db-multiple-field button { @apply rounded-md h-8 ltr:mr-[3px] rtl:ml-[3px] px-4 text-base transition bg-primary/10 text-primary hover:bg-primary hover:text-white }
-    .db-field-alert { @apply ml-1 text-red-500 font-public }
+    .db-field-alert { @apply ml-1 text-[#4342ff] font-public }
     .db-field-down-arrow { @apply relative after:content-['\f107'] after:font-awesome after:font-bold after:text-xs after:absolute after:top-1/2 after:-translate-y-1/2 ltr:after:right-3 rtl:after:left-3 }
     .db-field-radio-group { @apply flex items-center gap-5 pt-2 }
     .db-field-radio { @apply flex items-center pt-1 w-fit cursor-pointer }
@@ -456,7 +454,7 @@
     .db-table-action i { @apply text-sm p-2 py-1 m-0.5 rounded transition }
     .db-table-action.view i { @apply text-primary bg-primary/10 hover:bg-primary/20 }
     .db-table-action.edit i { @apply text-green-500 bg-green-100 hover:bg-green-200 }
-    .db-table-action.delete i { @apply text-red-500 bg-red-100 hover:bg-red-200 }
+    .db-table-action.delete i { @apply text-[#4342ff] bg-[#4342ff]/10 hover:bg-[#4342ff]/20 }
     .table-filter-div { @apply h-0 overflow-hidden transition-all duration-500 ease-linear }
 
     /* TOOLTIP */
@@ -484,7 +482,7 @@
     .modal-btns { @apply flex flex-wrap justify-end gap-3 mt-3 }
     .modal-btn-fill { @apply inline-flex items-center gap-1.5 capitalize !text-sm py-1.5 px-3 rounded-md border border-primary text-white bg-primary }
     .modal-btn-outline { @apply inline-flex items-center gap-1.5 capitalize !text-sm py-1.5 px-3 rounded-md border border-gray-200 !text-gray-600 bg-white }
-    .modal-close { @apply leading-none text-xl text-[#FB4E4E]  }
+    .modal-close { @apply leading-none text-xl text-[#4342ff]  }
 
 
     /* PAGINATION */
@@ -514,7 +512,7 @@
     .db-badge.yellow { @apply text-yellow-600 bg-yellow-100 }
     .db-badge.green { @apply text-green-600 bg-green-100 }
     .db-badge.blue { @apply text-blue-600 bg-blue-100 }
-    .db-badge.red { @apply text-red-600 bg-red-100 }
+    .db-badge.red { @apply text-[#4342ff] bg-[#4342ff]/10 }
 
 
     /* DRAWER */

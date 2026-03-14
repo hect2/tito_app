@@ -32,8 +32,8 @@ module.exports = {
                 heading: "#1F1F39",
                 paragraph: "#6E7191",
                 placeholder: "#A0A3BD",
-                primary: "rgb(255 10 10 / <alpha-value>)",
-                "primary-light": "rgb(220 234 255 / <alpha-value>)",
+                primary: "rgb(67 66 255 / <alpha-value>)",
+                "primary-light": "rgb(237 237 255 / <alpha-value>)",
 
                 // Variables CSS (de tu app.css)
                 border: "hsl(var(--border))",

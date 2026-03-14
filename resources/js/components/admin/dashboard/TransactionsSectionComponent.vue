@@ -81,7 +81,7 @@ export default {
                 REFUND: '#8B5CF6',
                 CHARGEBACK: '#EC4899',
             },
-            PAYMENT_COLORS: ['#E30613', '#3B82F6', '#F59E0B', '#8B5CF6'],
+            PAYMENT_COLORS: ['#4342ff', '#3B82F6', '#F59E0B', '#8B5CF6'],
             labels: {
                 ACCEPT: 'Aceptada',
                 DECLINE: 'Rechazada',

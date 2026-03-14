@@ -18,7 +18,7 @@
 <body>
     <div class="py-14 px-4 w-full max-w-3xl mx-auto">
         <a id="home-route1"  href="{{ route('home') }}" class="block mx-auto w-36 mb-8 home-routes">
-            <img class="w-full" src="{{ $logo->logo }}" alt="logo">
+            <img class="w-20" src="{{ $logo->logo }}" alt="logo">
         </a>
         <h3 class="text-[22px] text-center font-medium leading-[34px] mb-6">
             {{ __('all.message.select_your_payment_method') }}</h3>

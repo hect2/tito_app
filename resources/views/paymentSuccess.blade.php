@@ -16,7 +16,7 @@
 
 <div class="py-14 px-4 w-full max-w-2xl mx-auto flex flex-col items-center justify-center">
     <a href="{{ route('home') }}" class="w-36 mb-8">
-        <img class="w-full" src="{{ $logo->logo }}" alt="logo">
+        <img class="w-20" src="{{ $logo->logo }}" alt="logo">
     </a>
 
     <img class="w-full max-w-[120px] mb-3" src="{{ asset('images/default/payment-success.gif') }}" alt="success">
