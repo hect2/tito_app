@@ -45,11 +45,11 @@ class PaymentGatewayDataTableSeeder extends Seeder
             "options" => [
                 [
                     "option" => 'stripe_key',
-                    "value" => env('KEY_STRYPE', ''),
+                    "value" => '', // env('KEY_STRYPE', ''),
                 ],
                 [
                     "option" => 'stripe_secret',
-                    "value" => env('STRIPE_SECRET', ''),
+                    "value" => '', // env('STRIPE_SECRET', ''),
                 ],
                 [
                     "option" => 'stripe_mode',
@@ -89,11 +89,11 @@ class PaymentGatewayDataTableSeeder extends Seeder
             "options" => [
                 [
                     "option" => 'paystack_public_key',
-                    "value" => env('PAYSTACK_PUBLIC'),
+                    "value" => '', // env('PAYSTACK_PUBLIC'),
                 ],
                 [
                     "option" => 'paystack_secret_key',
-                    "value" => env('PAYSTACK_SECRE', ''),
+                    "value" => '', // env('PAYSTACK_SECRE', ''),
                 ],
                 [
                     "option" => 'paystack_payment_url',
